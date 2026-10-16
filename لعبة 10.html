@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة وتمارين المضارع المستمر: Present Progressive - 20 سؤال</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo for Arabic & Fredoka + Quicksand for playful English typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Fredoka:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        arabic: ['Cairo', 'sans-serif'],
+                        english: ['Fredoka', 'sans-serif']
+                    },
+                    colors: {
+                        brandPink: '#FF8FAB',
+                        brandBlue: '#3B82F6',
+                        brandYellow: '#FBBF24',
+                        brandGreen: '#10B981',
+                        brandPurple: '#8B5CF6',
+                        brandRose: '#F43F5E',
+                        brandSky: '#0EA5E9'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .font-en {
+            font-family: 'Fredoka', sans-serif;
+            direction: ltr;
+            unicode-bidi: isolate;
+        }
+        /* Cheerful educational wallpaper pattern */
+        .bg-pattern {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(#fed7aa 1.5px, transparent 1.5px),
+                radial-gradient(#bae6fd 1.5px, #f8fafc 1.5px);
+            background-size: 36px 36px;
+            background-position: 0 0, 18px 18px;
+        }
+        /* 3D Tactile Buttons */
+        .btn-3d {
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .btn-3d:active {
+            transform: translateY(3px);
+            box-shadow: none !important;
+        }
+        /* Drop Target Slots */
+        .drop-target {
+            min-width: 130px;
+            min-height: 48px;
+            border: 2.5px dashed #94a3b8;
+            background-color: #f1f5f9;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            user-select: none;
+        }
+        .drop-target.hovered {
+            border-color: #2563eb;
+            background-color: #dbeafe;
+            transform: scale(1.05);
+        }
+        .drop-target.filled {
+            border-style: solid;
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+            color: #1e40af;
+        }
+        .drop-target.correct {
+            border-style: solid;
+            border-color: #10b981;
+            background-color: #dcfce7;
+            color: #14532d;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+        }
+        .drop-target.wrong {
+            border-style: solid;
+            border-color: #ef4444;
+            background-color: #fee2e2;
+            color: #7f1d1d;
+            animation: shake 0.4s ease-in-out;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-6px); }
+            40%, 80% { transform: translateX(6px); }
+        }
+        .option-chip {
+            cursor: grab;
+            transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s;
+            touch-action: none;
+        }
+        .option-chip:active {
+            cursor: grabbing;
+            transform: scale(1.06);
+        }
+        /* Floating Avatar Glow */
+        .avatar-box {
+            box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen text-slate-800 flex flex-col justify-between">
+
+    <!-- Top Navigation / Branding Header -->
+    <header class="w-full bg-white/95 backdrop-blur-md border-b-2 border-indigo-100 sticky top-0 z-40 shadow-xs py-2.5 px-4">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            
+            <!-- School / Instructor Info -->
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-600 via-indigo-600 to-sky-400 flex items-center justify-center text-white shadow-md text-2xl font-black">
+                    🎓
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs bg-purple-100 text-purple-900 font-extrabold px-2.5 py-0.5 rounded-full font-en">LANGUA LEARN</span>
+                        <h1 class="text-lg md:text-xl font-black text-slate-800 font-en tracking-tight">Present Progressive</h1>
+                    </div>
+                    <p class="text-xs text-slate-500 flex items-center gap-1.5 mt-0.5 font-arabic">
+                        <span>ورقة عمل تفاعلية شاملة (20 سؤال)</span>
+                        <span class="text-slate-300">|</span>
+                        <span class="text-indigo-600 font-bold">المعلم ماجد السويهري</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stats Bar (XP, Hearts, Audio, Rules) -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                
+                <!-- XP Points -->
+                <div class="flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-2xl shadow-xs">
+                    <span class="text-lg">⭐</span>
+                    <span class="text-sm font-black text-amber-700 font-en" id="score-display">+<span id="xp-counter">0</span> XP</span>
+                </div>
+
+                <!-- Hearts / Lives -->
+                <div class="flex items-center gap-1 bg-rose-50 border border-rose-200 px-3 py-1.5 rounded-2xl shadow-xs" id="hearts-container">
+                    <span class="text-base text-rose-500 animate-pulse">❤️</span>
+                    <span class="text-base text-rose-500 animate-pulse">❤️</span>
+                    <span class="text-base text-rose-500 animate-pulse">❤️</span>
+                </div>
+
+                <!-- Sound Button -->
+                <button id="sound-btn" onclick="toggleSound()" class="p-2 sm:px-3 sm:py-1.5 rounded-2xl border border-slate-200 hover:bg-slate-100 text-slate-700 transition flex items-center gap-1.5 font-bold text-xs" title="كتم / تفعيل الصوت">
+                    <span id="sound-icon" class="text-base">🔊</span>
+                    <span class="hidden sm:inline">الصوت</span>
+                </button>
+
+                <!-- Grammar Rule Button -->
+                <button onclick="openRuleModal()" class="px-3 py-1.5 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white text-xs sm:text-sm font-bold rounded-2xl transition shadow-xs flex items-center gap-1.5">
+                    <span>📖</span>
+                    <span>القاعدة</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto w-full p-3 sm:p-5 flex-1 space-y-5">
+        
+        <!-- Mode Switcher Tabs -->
+        <div class="flex items-center justify-center gap-2 overflow-x-auto pb-1">
+            <button onclick="switchTab('cards-view')" id="tab-cards-view" class="tab-btn px-4 sm:px-5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shadow-sm bg-indigo-600 text-white shadow-indigo-200">
+                <span>🎮</span>
+                <span>بطاقات الأسئلة (سحب وإفلات)</span>
+            </button>
+            <button onclick="switchTab('arcade-quiz')" id="tab-arcade-quiz" class="tab-btn px-4 sm:px-5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm transition-all flex items-center gap-2 bg-white text-slate-600 hover:bg-slate-50 border border-slate-200">
+                <span>⚡</span>
+                <span>تحدي السرعة والبقاء (Arcade)</span>
+            </button>
+            <button onclick="switchTab('keywords-lab')" id="tab-keywords-lab" class="tab-btn px-4 sm:px-5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm transition-all flex items-center gap-2 bg-white text-slate-600 hover:bg-slate-50 border border-slate-200">
+                <span>🔑</span>
+                <span>معمل الكلمات المفتاحية (Clue Words)</span>
+            </button>
+        </div>
+
+        <!-- SECTION 1: 3D CARDS VIEW (ALL 20 QUESTIONS) -->
+        <section id="section-cards-view" class="block space-y-4">
+            
+            <!-- Instructions and Filter Banner -->
+            <div class="bg-gradient-to-r from-purple-100 via-sky-50 to-pink-50 rounded-3xl p-4 sm:p-5 border-2 border-indigo-100 shadow-sm">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-3">
+                    <div class="space-y-1 text-center lg:text-right">
+                        <div class="inline-flex items-center gap-2 px-3 py-0.5 bg-white/90 rounded-full text-xs font-black text-indigo-700 border border-indigo-200">
+                            <span>💡 المطلوب:</span>
+                            <span class="font-arabic">اختر الإجابة الصحيحة أو اسحبها وضعها في الفراغ</span>
+                        </div>
+                        <h2 class="text-base sm:text-lg font-black text-slate-800">
+                            Present Progressive: Choose the correct answer
+                        </h2>
+                        <p class="text-xs text-slate-600">
+                            اسحب بطاقة الإجابة وضعها في الفراغ، أو انقر على الإجابة مباشرة لوضعها فوراً! يمكنك سماع النطق بالضغط على 🔉.
+                        </p>
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div class="flex items-center gap-1.5 bg-white/90 p-1.5 rounded-2xl border border-indigo-200 text-xs font-bold flex-wrap justify-center">
+                        <button onclick="filterCards('all')" id="filter-all" class="px-3 py-1.5 rounded-xl bg-indigo-600 text-white transition">الكل (20)</button>
+                        <button onclick="filterCards('affirmative')" id="filter-affirmative" class="px-3 py-1.5 rounded-xl text-slate-600 hover:bg-indigo-50 transition">إثبات (+)</button>
+                        <button onclick="filterCards('negative')" id="filter-negative" class="px-3 py-1.5 rounded-xl text-slate-600 hover:bg-indigo-50 transition">نفي (-)</button>
+                        <button onclick="filterCards('question')" id="filter-question" class="px-3 py-1.5 rounded-xl text-slate-600 hover:bg-indigo-50 transition">سؤال (?)</button>
+                    </div>
+                </div>
+
+                <!-- Page Progress indicator -->
+                <div class="mt-4 pt-3 border-t border-indigo-100 flex items-center justify-between flex-wrap gap-2 text-xs font-bold text-slate-600">
+                    <div class="flex items-center gap-2">
+                        <span>📊 التقدم المنجز:</span>
+                        <div class="w-36 sm:w-48 bg-slate-200 h-3 rounded-full overflow-hidden p-0.5">
+                            <div id="cards-progress-bar" class="bg-gradient-to-r from-indigo-500 to-emerald-500 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                        <span id="cards-progress-text" class="font-en text-indigo-700 font-black">0 / 20</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button onclick="autoSolveDemo()" class="text-slate-400 hover:text-indigo-600 underline text-[11px] transition">
+                            حل تجريبي سريع 🪄
+                        </button>
+                        <button onclick="resetCardsView()" class="px-3 py-1 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-700 transition">
+                            🔄 مسح الإجابات
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cards-container" class="space-y-3.5">
+                <!-- Dynamically generated 20 questions based on the worksheet -->
+            </div>
+
+            <!-- Bottom Floating Action Controls -->
+            <div class="sticky bottom-3 z-30 bg-white/95 backdrop-blur-md p-3 sm:p-4 rounded-3xl border-2 border-indigo-100 shadow-xl flex items-center justify-between gap-3 flex-wrap">
+                <div class="text-xs sm:text-sm font-bold text-slate-600 flex items-center gap-1.5">
+                    <span class="text-emerald-500 font-black text-lg">✔</span>
+                    <span>عند الانتهاء اضغط على الزر الأخضر للتحقق من كافة إجاباتك</span>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button onclick="checkAllCardsAnswers()" class="px-6 sm:px-8 py-3 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-600 hover:to-teal-700 text-white font-black text-sm sm:text-base rounded-2xl shadow-lg shadow-emerald-200 btn-3d flex items-center gap-2">
+                        <span>✨</span>
+                        <span>تحقق من الإجابات</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ARCADE SPEED & SURVIVAL QUIZ -->
+        <section id="section-arcade-quiz" class="hidden">
+            <div class="max-w-2xl mx-auto bg-white rounded-3xl p-5 sm:p-8 border-2 border-indigo-100 shadow-xl space-y-6 text-center relative overflow-hidden">
+                
+                <!-- Arcade top HUD -->
+                <div class="flex items-center justify-between text-xs sm:text-sm font-black border-b border-slate-100 pb-3">
+                    <div class="flex items-center gap-1.5 text-indigo-700">
+                        <span>سؤال:</span>
+                        <span id="arcade-step-counter" class="font-en text-base text-indigo-900">1 / 20</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-1 bg-amber-50 text-amber-700 border border-amber-200 px-2.5 py-1 rounded-xl">
+                            <span>🔥 سلسلة:</span>
+                            <span id="arcade-streak" class="font-en text-base">0</span>
+                        </div>
+                        <div class="flex items-center gap-1 bg-rose-50 text-rose-700 border border-rose-200 px-2.5 py-1 rounded-xl">
+                            <span>⏱️</span>
+                            <span id="arcade-timer" class="font-en text-base">15s</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Question Card Presentation -->
+                <div class="bg-gradient-to-br from-indigo-50/80 via-purple-50/40 to-sky-50/60 border-2 border-indigo-100 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm relative">
+                    
+                    <!-- Avatar Illustration & Type badge -->
+                    <div class="flex items-center justify-between">
+                        <span id="arcade-type-badge" class="px-3 py-1 bg-white border border-indigo-200 rounded-full text-xs font-black text-indigo-700">
+                            إثبات (Affirmative)
+                        </span>
+                        <div id="arcade-avatar" class="text-5xl sm:text-6xl animate-bounce">
+                            👧🎒
+                        </div>
+                        <span id="arcade-clue-badge" class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold font-en">
+                            now
+                        </span>
+                    </div>
+
+                    <!-- Sentence Presentation -->
+                    <div id="arcade-sentence-box" class="font-en text-xl sm:text-3xl font-black text-slate-800 min-h-[70px] flex items-center justify-center gap-2 flex-wrap leading-relaxed">
+                        <!-- Populated dynamically -->
+                    </div>
+
+                    <div id="arcade-arabic-hint" class="text-xs sm:text-sm font-bold text-slate-500 font-arabic">
+                        هي تذهب إلى المدرسة الآن
+                    </div>
+                </div>
+
+                <!-- 3 Large Option Buttons -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="arcade-options-box">
+                    <!-- Populated dynamically -->
+                </div>
+
+                <!-- Feedback Text -->
+                <div id="arcade-feedback" class="h-6 font-bold text-sm flex items-center justify-center"></div>
+
+                <!-- Next button when paused -->
+                <button id="arcade-next-btn" onclick="nextArcadeQuestion()" class="hidden w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-black text-base rounded-2xl shadow-md btn-3d transition">
+                    السؤال التالي ➡️
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 3: KEYWORDS & CLUE WORDS LAB -->
+        <section id="section-keywords-lab" class="hidden space-y-6">
+            <div class="bg-gradient-to-r from-amber-50 via-sky-50 to-indigo-50 p-6 sm:p-8 rounded-3xl border-2 border-amber-200 space-y-6">
+                
+                <div class="text-center max-w-xl mx-auto space-y-2">
+                    <span class="text-4xl">🔍✨</span>
+                    <h2 class="text-2xl font-black text-amber-950">معمل الكلمات الدالة (Clue Words)</h2>
+                    <p class="text-xs sm:text-sm text-amber-900">
+                        عندما تشاهد إحدى هذه الكلمات الدالة في الجملة، اعلم فوراً أن الفعل في زمن **المضارع المستمر**:
+                        <span class="font-en font-bold text-indigo-700 bg-white px-2 py-0.5 rounded-lg border border-indigo-200">am / is / are + Verb-ing</span>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3" id="clue-words-grid">
+                    <!-- Populated with click-to-speak chips -->
+                </div>
+
+                <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-indigo-100 shadow-sm space-y-4">
+                    <h3 class="text-base font-black text-slate-800 border-b pb-2 flex items-center gap-2">
+                        <span>📋</span>
+                        <span>جدول ملخص قواعد التكوين الثلاثة:</span>
+                    </h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+                        <!-- Affirmative -->
+                        <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 space-y-2">
+                            <div class="font-black text-emerald-800 flex items-center justify-between">
+                                <span>1. الإثبات (+)</span>
+                                <span class="font-en text-xs bg-emerald-200 px-2 py-0.5 rounded">Affirmative</span>
+                            </div>
+                            <div class="font-en font-black text-slate-700 bg-white p-2 rounded-xl text-center">
+                                Subject + am/is/are + V-ing
+                            </div>
+                            <p class="font-en text-slate-600 font-bold">• She <strong class="text-emerald-700">is going</strong> now.</p>
+                            <p class="font-en text-slate-600 font-bold">• They <strong class="text-emerald-700">are watching</strong> TV.</p>
+                        </div>
+
+                        <!-- Negative -->
+                        <div class="p-4 rounded-2xl bg-rose-50 border border-rose-200 space-y-2">
+                            <div class="font-black text-rose-800 flex items-center justify-between">
+                                <span>2. النفي (-)</span>
+                                <span class="font-en text-xs bg-rose-200 px-2 py-0.5 rounded">Negative</span>
+                            </div>
+                            <div class="font-en font-black text-slate-700 bg-white p-2 rounded-xl text-center">
+                                Subject + am/is/are + not + V-ing
+                            </div>
+                            <p class="font-en text-slate-600 font-bold">• We <strong class="text-rose-700">are not going</strong>.</p>
+                            <p class="font-en text-slate-600 font-bold">• He <strong class="text-rose-700">isn't reading</strong> now.</p>
+                        </div>
+
+                        <!-- Question -->
+                        <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-200 space-y-2">
+                            <div class="font-black text-indigo-800 flex items-center justify-between">
+                                <span>3. السؤال (?)</span>
+                                <span class="font-en text-xs bg-indigo-200 px-2 py-0.5 rounded">Question</span>
+                            </div>
+                            <div class="font-en font-black text-slate-700 bg-white p-2 rounded-xl text-center">
+                                Am/Is/Are + Subject + V-ing?
+                            </div>
+                            <p class="font-en text-slate-600 font-bold">• <strong class="text-indigo-700">Is</strong> Omar <strong class="text-indigo-700">drawing</strong>?</p>
+                            <p class="font-en text-slate-600 font-bold">• <strong class="text-indigo-700">Are</strong> you <strong class="text-indigo-700">studying</strong> now?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RULE MODAL -->
+    <div id="rule-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-7 space-y-4 border-4 border-indigo-200 shadow-2xl relative max-h-[92vh] overflow-y-auto">
+            <button onclick="closeRuleModal()" class="absolute top-4 left-4 w-9 h-9 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full flex items-center justify-center font-bold text-base transition">✕</button>
+            
+            <div class="text-center space-y-1">
+                <span class="text-4xl">⏰✨</span>
+                <h3 class="text-2xl font-black text-slate-900 font-en">Present Progressive</h3>
+                <h4 class="text-base font-bold text-purple-700 font-arabic">المضارع المستمر</h4>
+                <p class="text-xs text-slate-500 bg-purple-50 p-2 rounded-xl border border-purple-100">
+                    يعبر عن حدث يقع في هذه اللحظة (Action happening right now) أو خطة قائمة.
+                </p>
+            </div>
+
+            <!-- Verb to Be breakdown -->
+            <div class="grid grid-cols-3 gap-2 text-center text-xs font-en">
+                <div class="p-2.5 bg-rose-50 border border-rose-200 rounded-2xl">
+                    <span class="block text-rose-600 font-black text-base">I</span>
+                    <span class="font-black text-slate-800">am + V-ing</span>
+                </div>
+                <div class="p-2.5 bg-amber-50 border border-amber-200 rounded-2xl">
+                    <span class="block text-amber-600 font-black text-base">He / She / It</span>
+                    <span class="font-black text-slate-800">is + V-ing</span>
+                </div>
+                <div class="p-2.5 bg-emerald-50 border border-emerald-200 rounded-2xl">
+                    <span class="block text-emerald-600 font-black text-base">We / They / You</span>
+                    <span class="font-black text-slate-800">are + V-ing</span>
+                </div>
+            </div>
+
+            <!-- Clue words in modal -->
+            <div class="bg-amber-50 p-3 rounded-2xl border border-amber-200 text-xs text-amber-900 space-y-1">
+                <strong>الكلمات الدالة الرئيسية:</strong>
+                <p class="font-en font-black text-amber-950 text-sm">
+                    now, Look!, Listen!, at the moment, right now, today
+                </p>
+            </div>
+
+            <button onclick="closeRuleModal()" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-bold transition">
+                فهمت القاعدة، دعنا نكمل اللعب! 🚀
+            </button>
+        </div>
+    </div>
+
+    <!-- SUCCESS CELEBRATION MODAL -->
+    <div id="success-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center space-y-4 border-4 border-emerald-300 shadow-2xl relative animate-scaleIn">
+            <div class="text-6xl animate-bounce">🏆🎉</div>
+            <h3 class="text-2xl font-black text-emerald-800">بطل متألق ومتميز!</h3>
+            <p id="success-message" class="text-slate-600 text-sm">لقد أتممت بنجاح تمرين المضارع المستمر وحققت درجات مذهلة.</p>
+            
+            <div class="bg-emerald-50 rounded-2xl p-4 border border-emerald-100 flex items-center justify-around">
+                <div>
+                    <span class="block text-3xl font-black text-emerald-700 font-en" id="final-correct-score">20/20</span>
+                    <span class="text-xs text-emerald-600 font-bold">إجابات صحيحة</span>
+                </div>
+                <div>
+                    <span class="block text-3xl font-black text-amber-600 font-en" id="final-earned-xp">+350 XP</span>
+                    <span class="text-xs text-amber-600 font-bold">نقاط خبرة</span>
+                </div>
+            </div>
+
+            <div class="flex gap-2 pt-2">
+                <button onclick="closeSuccessModal(); resetCardsView();" class="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-2xl transition">
+                    إعادة التمرين 🔄
+                </button>
+                <button onclick="closeSuccessModal(); switchTab('arcade-quiz');" class="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-2xl transition">
+                    تحدي السرعة ⚡
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas for confetti celebrations -->
+    <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-50"></canvas>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white/80 border-t border-slate-200 py-3 px-4 text-center text-xs text-slate-500 font-arabic">
+        <div class="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <span>📚 درس: <strong class="font-en text-slate-700">Present Progressive (20 Questions)</strong></span>
+            <span>تصميم تعليمي تفاعلي: <strong class="text-indigo-600">المعلم ماجد السويهري</strong> | <span class="font-en">LANGUA LEARN</span></span>
+        </div>
+    </footer>
+
+    <script>
+        // Variants for Question 3 allowing seamless toggling between forms
+        const q3Variants = [
+            {
+                variantName: "سؤال بفراغين (صيغة ورقة العمل)",
+                isSplitQuestion: true,
+                type: "question",
+                before: "",
+                mid: "Omar",
+                after: "a picture now?",
+                options: ["Do / draw", "Does / draw", "Is / drawing"],
+                correct: "Is / drawing",
+                keyword: "now",
+                avatar: "👦🎨",
+                arabicHint: "هل يرسم عمر صورة الآن؟ (سؤال بفراغين: Is ... drawing?)",
+                fullSentence: "Is Omar drawing a picture now?"
+            },
+            {
+                variantName: "سؤال بفراغ واحد",
+                isSplitQuestion: false,
+                type: "question",
+                before: "Is Omar",
+                after: "a picture now?",
+                options: ["draw", "draws", "drawing"],
+                correct: "drawing",
+                keyword: "now",
+                avatar: "👦🎨",
+                arabicHint: "هل يرسم عمر صورة الآن؟ (فراغ واحد للفعل: drawing)",
+                fullSentence: "Is Omar drawing a picture now?"
+            },
+            {
+                variantName: "جملة إثبات عادية (+)",
+                isSplitQuestion: false,
+                type: "affirmative",
+                before: "Omar",
+                after: "a picture now.",
+                options: ["draw", "draws", "is drawing"],
+                correct: "is drawing",
+                keyword: "now",
+                avatar: "👦🎨",
+                arabicHint: "عمر يرسم صورة الآن (جملة مثبتة: is drawing)",
+                fullSentence: "Omar is drawing a picture now."
+            }
+        ];
+        let currentQ3VariantIndex = 0;
+
+        // 20 Exact Questions faithfully matching the provided worksheet image
+        const questionsDB = [
+            {
+                id: 1,
+                subject: "She",
+                type: "affirmative",
+                before: "She",
+                after: "to school now.",
+                options: ["go", "goes", "is going"],
+                correct: "is going",
+                keyword: "now",
+                avatar: "👧🎒",
+                arabicHint: "هي تذهب إلى المدرسة الآن (مفرد + now)",
+                fullSentence: "She is going to school now.",
+                userAnswer: null
+            },
+            {
+                id: 2,
+                subject: "We",
+                type: "negative",
+                before: "We",
+                after: "to the park now.",
+                options: ["are not going", "don't go", "didn't go"],
+                correct: "are not going",
+                keyword: "now",
+                avatar: "🏞️👫",
+                arabicHint: "نحن لا نذهب إلى الحديقة الآن (نفي مستمر مع We)",
+                fullSentence: "We are not going to the park now.",
+                userAnswer: null
+            },
+            {
+                id: 3,
+                subject: "Omar",
+                type: "question",
+                isSplitQuestion: true,
+                before: "",
+                mid: "Omar",
+                after: "a picture now?",
+                options: ["Do / draw", "Does / draw", "Is / drawing"],
+                correct: "Is / drawing",
+                keyword: "now",
+                avatar: "👦🎨",
+                arabicHint: "هل يرسم عمر صورة الآن؟ (سؤال مستمر للمفرد)",
+                fullSentence: "Is Omar drawing a picture now?",
+                userAnswer: null
+            },
+            {
+                id: 4,
+                subject: "The baby",
+                type: "affirmative",
+                before: "The baby",
+                after: ".",
+                options: ["is sleeping", "sleeps", "sleep"],
+                correct: "is sleeping",
+                keyword: "in progress",
+                avatar: "👶💤",
+                arabicHint: "الطفل نائم الآن (حدث جاري لمفرد)",
+                fullSentence: "The baby is sleeping.",
+                userAnswer: null
+            },
+            {
+                id: 5,
+                subject: "She",
+                type: "affirmative",
+                before: "Listen! She",
+                after: "a song.",
+                options: ["sings", "sing", "is singing"],
+                correct: "is singing",
+                keyword: "Listen!",
+                avatar: "🎤👧",
+                arabicHint: "استمع! إنها تغني أغنية (كلمة دالة: Listen)",
+                fullSentence: "Listen! She is singing a song.",
+                userAnswer: null
+            },
+            {
+                id: 6,
+                subject: "They",
+                type: "negative",
+                before: "They",
+                after: "football today.",
+                options: ["aren't play", "aren't playing", "don't playing"],
+                correct: "aren't playing",
+                keyword: "today",
+                avatar: "⚽👦",
+                arabicHint: "هم لا يلعبون كرة القدم اليوم (نفي مستمر مع They)",
+                fullSentence: "They aren't playing football today.",
+                userAnswer: null
+            },
+            {
+                id: 7,
+                subject: "I",
+                type: "affirmative",
+                before: "I",
+                after: "my homework right now.",
+                options: ["am doing", "does", "do"],
+                correct: "am doing",
+                keyword: "right now",
+                avatar: "📝👦",
+                arabicHint: "أنا أحل واجبي في هذه اللحظة (I am doing)",
+                fullSentence: "I am doing my homework right now.",
+                userAnswer: null
+            },
+            {
+                id: 8,
+                subject: "the children",
+                type: "question",
+                isSplitQuestion: true,
+                before: "",
+                mid: "the children",
+                after: "?",
+                options: ["Are / play", "Are / playing", "Do / plays"],
+                correct: "Are / playing",
+                keyword: "in progress",
+                avatar: "🧒🎈",
+                arabicHint: "هل الأطفال يلعبون؟ (سؤال مستمر للجمع)",
+                fullSentence: "Are the children playing?",
+                userAnswer: null
+            },
+            {
+                id: 9,
+                subject: "He",
+                type: "affirmative",
+                before: "He",
+                after: "breakfast now.",
+                options: ["eats", "is eating", "eat"],
+                correct: "is eating",
+                keyword: "now",
+                avatar: "🍳👦",
+                arabicHint: "هو يتناول طعام الإفطار الآن (He is eating)",
+                fullSentence: "He is eating breakfast now.",
+                userAnswer: null
+            },
+            {
+                id: 10,
+                subject: "I",
+                type: "affirmative",
+                before: "Right now, I",
+                after: "in my room.",
+                options: ["am", "be", "am sitting"],
+                correct: "am sitting",
+                keyword: "Right now",
+                avatar: "🪑📖",
+                arabicHint: "حالياً، أنا جالس في غرفتي (I am sitting)",
+                fullSentence: "Right now, I am sitting in my room.",
+                userAnswer: null
+            },
+            {
+                id: 11,
+                subject: "They",
+                type: "affirmative",
+                before: "They",
+                after: "TV at the moment.",
+                options: ["are watching", "watch", "watches"],
+                correct: "are watching",
+                keyword: "at the moment",
+                avatar: "📺👨‍👩‍👧",
+                arabicHint: "هم يشاهدون التلفاز في هذه اللحظة (They are watching)",
+                fullSentence: "They are watching TV at the moment.",
+                userAnswer: null
+            },
+            {
+                id: 12,
+                subject: "She",
+                type: "negative",
+                before: "She",
+                after: "in the kitchen.",
+                options: ["isn't cooking", "doesn't cook", "not cook"],
+                correct: "isn't cooking",
+                keyword: "in progress",
+                avatar: "🍳👩‍🍳",
+                arabicHint: "هي لا تطبخ في المطبخ الآن (نفي مستمر لمفرد)",
+                fullSentence: "She isn't cooking in the kitchen.",
+                userAnswer: null
+            },
+            {
+                id: 13,
+                subject: "you",
+                type: "question",
+                isSplitQuestion: true,
+                before: "",
+                mid: "you",
+                after: "English now?",
+                options: ["Do / study", "Are / studying", "Is / study"],
+                correct: "Are / studying",
+                keyword: "now",
+                avatar: "📚👩",
+                arabicHint: "هل تدرس الإنجليزية الآن؟ (Are you studying)",
+                fullSentence: "Are you studying English now?",
+                userAnswer: null
+            },
+            {
+                id: 14,
+                subject: "The boys",
+                type: "affirmative",
+                before: "Look! The boys",
+                after: "football.",
+                options: ["play", "are playing", "plays"],
+                correct: "are playing",
+                keyword: "Look!",
+                avatar: "👀⚽",
+                arabicHint: "انظر! الأولاد يلعبون كرة القدم (The boys are playing)",
+                fullSentence: "Look! The boys are playing football.",
+                userAnswer: null
+            },
+            {
+                id: 15,
+                subject: "He",
+                type: "negative",
+                before: "He",
+                after: "his book now.",
+                options: ["don't read", "didn't read", "isn't reading"],
+                correct: "isn't reading",
+                keyword: "now",
+                avatar: "📖👦",
+                arabicHint: "هو لا يقرأ كتابه الآن (He isn't reading)",
+                fullSentence: "He isn't reading his book now.",
+                userAnswer: null
+            },
+            {
+                id: 16,
+                subject: "my father",
+                type: "affirmative",
+                before: "Now, my father",
+                after: "coffee in the garden.",
+                options: ["drinks", "is drinking", "drink"],
+                correct: "is drinking",
+                keyword: "Now",
+                avatar: "☕👨🌳",
+                arabicHint: "الآن، والدي يشرب القهوة في الحديقة (is drinking)",
+                fullSentence: "Now, my father is drinking coffee in the garden.",
+                userAnswer: null
+            },
+            {
+                id: 17,
+                subject: "she",
+                type: "question",
+                isSplitQuestion: true,
+                before: "",
+                mid: "she",
+                after: "to music?",
+                options: ["Does / listen", "Is / listening", "Are / listen"],
+                correct: "Is / listening",
+                keyword: "in progress",
+                avatar: "🎧👧",
+                arabicHint: "هل هي تستمع للموسيقى؟ (Is she listening)",
+                fullSentence: "Is she listening to music?",
+                userAnswer: null
+            },
+            {
+                id: 18,
+                subject: "I",
+                type: "negative",
+                before: "I",
+                after: "to music now.",
+                options: ["don't listen", "am not listening", "didn't listen"],
+                correct: "am not listening",
+                keyword: "now",
+                avatar: "🙅‍♂️🎶",
+                arabicHint: "أنا لا استمع إلى الموسيقى الآن (I am not listening)",
+                fullSentence: "I am not listening to music now.",
+                userAnswer: null
+            },
+            {
+                id: 19,
+                subject: "we",
+                type: "affirmative",
+                before: "At the moment, we",
+                after: "our lessons.",
+                options: ["study", "are studying", "studies"],
+                correct: "are studying",
+                keyword: "At the moment",
+                avatar: "📝👫",
+                arabicHint: "في هذه اللحظة، نحن ندرس دروسنا (we are studying)",
+                fullSentence: "At the moment, we are studying our lessons.",
+                userAnswer: null
+            },
+            {
+                id: 20,
+                subject: "they",
+                type: "question",
+                isSplitQuestion: true,
+                before: "",
+                mid: "they",
+                after: "football?",
+                options: ["Is / play", "Are / playing", "Do / play"],
+                correct: "Are / playing",
+                keyword: "in progress",
+                avatar: "⚽🥅",
+                arabicHint: "هل هم يلعبون كرة القدم؟ (Are they playing)",
+                fullSentence: "Are they playing football?",
+                userAnswer: null
+            }
+        ];
+
+        function toggleQ3Variant() {
+            currentQ3VariantIndex = (currentQ3VariantIndex + 1) % q3Variants.length;
+            const newVar = q3Variants[currentQ3VariantIndex];
+            const q3 = questionsDB.find(item => item.id === 3);
+            if (q3) {
+                Object.assign(q3, newVar);
+                q3.userAnswer = null;
+                renderCards();
+                playSound('pop');
+                showToast(`تم تغيير الفقرة 3 إلى: ${newVar.variantName} ✨`, 'success');
+            }
+        }
+
+        let gameState = {
+            xp: 0,
+            lives: 3,
+            soundEnabled: true,
+            filter: 'all',
+            // Arcade mode state
+            arcadeIndex: 0,
+            arcadeStreak: 0,
+            arcadeTimer: 15,
+            arcadeInterval: null,
+            arcadePaused: false
+        };
+
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playSound(type) {
+            if (!gameState.soundEnabled) return;
+            try {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const now = audioCtx.currentTime;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                if (type === 'correct') {
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(523.25, now);
+                    osc.frequency.setValueAtTime(659.25, now + 0.08);
+                    osc.frequency.setValueAtTime(783.99, now + 0.16);
+                    gain.gain.setValueAtTime(0.25, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+                    osc.start(now);
+                    osc.stop(now + 0.35);
+                } else if (type === 'wrong') {
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(220, now);
+                    osc.frequency.setValueAtTime(174.61, now + 0.12);
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+                    osc.start(now);
+                    osc.stop(now + 0.3);
+                } else if (type === 'pop') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(450, now);
+                    osc.frequency.exponentialRampToValueAtTime(900, now + 0.07);
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+                    osc.start(now);
+                    osc.stop(now + 0.08);
+                } else if (type === 'fanfare') {
+                    [523.25, 659.25, 783.99, 1046.5].forEach((freq, idx) => {
+                        const o = audioCtx.createOscillator();
+                        const g = audioCtx.createGain();
+                        o.connect(g);
+                        g.connect(audioCtx.destination);
+                        o.frequency.value = freq;
+                        g.gain.setValueAtTime(0.18, now + idx * 0.09);
+                        g.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.09 + 0.3);
+                        o.start(now + idx * 0.09);
+                        o.stop(now + idx * 0.09 + 0.3);
+                    });
+                }
+            } catch (e) {
+                console.log("Audio not allowed or blocked");
+            }
+        }
+
+        function toggleSound() {
+            gameState.soundEnabled = !gameState.soundEnabled;
+            document.getElementById('sound-icon').textContent = gameState.soundEnabled ? '🔊' : '🔇';
+        }
+
+        function speakSentence(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = 0.88;
+                utterance.pitch = 1.05;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        function renderCards() {
+            const container = document.getElementById('cards-container');
+            container.innerHTML = '';
+
+            const filteredList = questionsDB.filter(q => {
+                if (gameState.filter === 'affirmative') return q.type === 'affirmative';
+                if (gameState.filter === 'negative') return q.type === 'negative';
+                if (gameState.filter === 'question') return q.type === 'question';
+                return true;
+            });
+
+            filteredList.forEach(q => {
+                const card = document.createElement('div');
+                card.id = `card-row-${q.id}`;
+                card.className = "bg-white p-4 sm:p-5 rounded-3xl border-2 border-slate-100 hover:border-indigo-200 shadow-sm transition-all flex flex-col lg:flex-row items-center justify-between gap-4";
+
+                // Left: Number badge, Type indicator, Sentence with Drop Target
+                const leftPart = document.createElement('div');
+                leftPart.className = "flex items-center gap-3 w-full lg:w-auto flex-wrap";
+
+                // Number badge
+                const numBadge = document.createElement('div');
+                numBadge.className = "w-9 h-9 rounded-2xl bg-indigo-50 border border-indigo-200 font-en font-black text-indigo-800 flex items-center justify-center text-sm shadow-2xs";
+                numBadge.textContent = `${q.id}.`;
+
+                // Form tag badge
+                const tagBadge = document.createElement('span');
+                if (q.type === 'affirmative') {
+                    tagBadge.className = "text-[11px] font-bold px-2 py-0.5 rounded-lg bg-emerald-100 text-emerald-800";
+                    tagBadge.textContent = "إثبات (+)";
+                } else if (q.type === 'negative') {
+                    tagBadge.className = "text-[11px] font-bold px-2 py-0.5 rounded-lg bg-rose-100 text-rose-800";
+                    tagBadge.textContent = "نفي (-)";
+                } else {
+                    tagBadge.className = "text-[11px] font-bold px-2 py-0.5 rounded-lg bg-purple-100 text-purple-800";
+                    tagBadge.textContent = "سؤال (?)";
+                }
+
+                leftPart.appendChild(numBadge);
+                leftPart.appendChild(tagBadge);
+
+                // For Question 3: add a neat quick-switcher button
+                if (q.id === 3) {
+                    const switchBtn = document.createElement('button');
+                    switchBtn.type = "button";
+                    switchBtn.onclick = () => toggleQ3Variant();
+                    switchBtn.className = "text-[11px] bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 px-2 py-0.5 rounded-lg font-bold flex items-center gap-1 transition shadow-xs";
+                    switchBtn.title = "انقر لتبديل صيغة هذه الفقرة بين (سؤال بفراغين / سؤال بفراغ واحد / جملة مثبتة)";
+                    switchBtn.innerHTML = `<span>🔄</span><span>تغيير صيغة الفقرة</span>`;
+                    leftPart.appendChild(switchBtn);
+                }
+
+                // Sentence Element with Slot(s)
+                const sentenceWrapper = document.createElement('div');
+                sentenceWrapper.className = "font-en text-lg sm:text-2xl font-black text-slate-800 flex items-center gap-2 flex-wrap";
+
+                // If question is split (e.g. Is Omar drawing...?) -> Split into TWO distinct slots!
+                if (q.isSplitQuestion) {
+                    const slot1 = createDropSlot(q, 1);
+                    const midSpan = document.createElement('span');
+                    midSpan.className = "text-indigo-900 px-1 font-black";
+                    midSpan.textContent = q.mid;
+                    const slot2 = createDropSlot(q, 2);
+                    const afterSpan = document.createElement('span');
+                    afterSpan.textContent = q.after;
+
+                    sentenceWrapper.appendChild(slot1);
+                    sentenceWrapper.appendChild(midSpan);
+                    sentenceWrapper.appendChild(slot2);
+                    sentenceWrapper.appendChild(afterSpan);
+                } else {
+                    const beforeSpan = document.createElement('span');
+                    beforeSpan.className = "text-indigo-900";
+                    beforeSpan.textContent = q.before;
+                    const slot = createDropSlot(q);
+                    const afterSpan = document.createElement('span');
+                    afterSpan.textContent = q.after;
+
+                    sentenceWrapper.appendChild(beforeSpan);
+                    sentenceWrapper.appendChild(slot);
+                    sentenceWrapper.appendChild(afterSpan);
+                }
+
+                leftPart.appendChild(sentenceWrapper);
+
+                // Right: 3 Options buttons, Avatar, and Audio Button
+                const rightPart = document.createElement('div');
+                rightPart.className = "flex items-center gap-3 w-full lg:w-auto justify-between lg:justify-end flex-wrap";
+
+                // Options Chips container
+                const optionsGroup = document.createElement('div');
+                optionsGroup.className = "flex items-center gap-2 flex-wrap";
+
+                q.options.forEach((opt, optIndex) => {
+                    const chip = document.createElement('button');
+                    let chipColor = "bg-sky-500 hover:bg-sky-600 text-white shadow-sky-200";
+                    if (optIndex === 1) chipColor = "bg-amber-500 hover:bg-amber-600 text-white shadow-amber-200";
+                    if (optIndex === 2) chipColor = "bg-emerald-500 hover:bg-emerald-600 text-white shadow-emerald-200";
+
+                    chip.className = `option-chip px-3.5 py-1.5 rounded-xl font-en font-black text-sm sm:text-base ${chipColor} shadow-sm btn-3d`;
+                    chip.textContent = opt;
+                    chip.draggable = true;
+
+                    // HTML5 Drag Events
+                    chip.addEventListener('dragstart', (e) => {
+                        e.dataTransfer.setData('text/plain', JSON.stringify({ qid: q.id, answer: opt }));
+                        playSound('pop');
+                    });
+
+                    // Click / Tap to immediate place
+                    chip.addEventListener('click', () => {
+                        placeAnswer(q.id, opt);
+                    });
+
+                    optionsGroup.appendChild(chip);
+                });
+
+                // Avatar Icon
+                const avatarDiv = document.createElement('div');
+                avatarDiv.className = "w-11 h-11 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-2xl shadow-2xs avatar-box";
+                avatarDiv.textContent = q.avatar;
+                avatarDiv.title = q.arabicHint;
+
+                // Speaker Button
+                const audioBtn = document.createElement('button');
+                audioBtn.className = "w-10 h-10 rounded-2xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 flex items-center justify-center text-lg transition border border-indigo-200 active:scale-95";
+                audioBtn.title = "استمع للجملة بالإنجليزية";
+                audioBtn.innerHTML = "🔉";
+                audioBtn.onclick = () => speakSentence(q.fullSentence);
+
+                rightPart.appendChild(optionsGroup);
+                rightPart.appendChild(avatarDiv);
+                rightPart.appendChild(audioBtn);
+
+                card.appendChild(leftPart);
+                card.appendChild(rightPart);
+                container.appendChild(card);
+            });
+
+            updateProgress();
+        }
+
+        function createDropSlot(question, part = null) {
+            const slot = document.createElement('div');
+            const slotId = part ? `slot-${question.id}-${part}` : `slot-${question.id}`;
+            slot.id = slotId;
+
+            // Set appropriate min-width depending on slot part
+            const minW = part === 1 ? 'min-w-[85px]' : (part === 2 ? 'min-w-[110px]' : 'min-w-[130px]');
+            slot.className = `drop-target ${minW} min-h-[48px] rounded-2xl flex items-center justify-center font-en text-base sm:text-xl font-black px-3.5 shadow-inner cursor-pointer transition-all duration-200`;
+            slot.dataset.qid = question.id;
+            if (part) slot.dataset.part = part;
+
+            // Populate content if already answered
+            if (question.userAnswer) {
+                if (part === 1) {
+                    const parts = question.userAnswer.split(' / ');
+                    slot.textContent = parts[0] || question.userAnswer;
+                } else if (part === 2) {
+                    const parts = question.userAnswer.split(' / ');
+                    slot.textContent = parts[1] || '';
+                } else {
+                    slot.textContent = question.userAnswer;
+                }
+                slot.classList.add('filled');
+            } else {
+                if (part === 1) {
+                    slot.innerHTML = `<span class="text-slate-400 text-xs font-arabic font-normal">الفراغ 1</span>`;
+                } else if (part === 2) {
+                    slot.innerHTML = `<span class="text-slate-400 text-xs font-arabic font-normal">الفراغ 2</span>`;
+                } else {
+                    slot.innerHTML = `<span class="text-slate-400 text-xs font-arabic font-normal">اسحب أو انقر هنا</span>`;
+                }
+            }
+
+            // Dragover & Drop
+            slot.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                slot.classList.add('hovered');
+            });
+            slot.addEventListener('dragleave', () => slot.classList.remove('hovered'));
+            slot.addEventListener('drop', (e) => {
+                e.preventDefault();
+                slot.classList.remove('hovered');
+                try {
+                    const data = JSON.parse(e.dataTransfer.getData('text/plain'));
+                    if (data && data.answer) {
+                        placeAnswer(question.id, data.answer);
+                    }
+                } catch (err) {}
+            });
+
+            // Tap to clear if already filled
+            slot.addEventListener('click', () => {
+                if (question.userAnswer) {
+                    clearSlot(question.id);
+                }
+            });
+
+            return slot;
+        }
+
+        function placeAnswer(qid, answer) {
+            const q = questionsDB.find(item => item.id === qid);
+            if (!q) return;
+
+            q.userAnswer = answer;
+            playSound('pop');
+
+            if (q.isSplitQuestion) {
+                const parts = answer.split(' / ');
+                const slot1 = document.getElementById(`slot-${qid}-1`);
+                const slot2 = document.getElementById(`slot-${qid}-2`);
+                if (slot1) {
+                    slot1.textContent = parts[0] || answer;
+                    slot1.className = "drop-target min-w-[85px] min-h-[48px] filled rounded-2xl flex items-center justify-center font-en text-base sm:text-xl font-black px-3.5 shadow-xs cursor-pointer";
+                }
+                if (slot2) {
+                    slot2.textContent = parts[1] || '';
+                    slot2.className = "drop-target min-w-[110px] min-h-[48px] filled rounded-2xl flex items-center justify-center font-en text-base sm:text-xl font-black px-3.5 shadow-xs cursor-pointer";
+                }
+            } else {
+                const slot = document.getElementById(`slot-${qid}`);
+                if (slot) {
+                    slot.textContent = answer;
+                    slot.className = "drop-target min-w-[130px] min-h-[48px] filled rounded-2xl flex items-center justify-center font-en text-base sm:text-xl font-black px-3.5 shadow-xs cursor-pointer";
+                }
+            }
+
+            updateProgress();
+        }
+
+        function clearSlot(qid) {
+            const q = questionsDB.find(item => item.id === qid);
+            if (!q) return;
+
+            q.userAnswer = null;
+            playSound('pop');
+
+            if (q.isSplitQuestion) {
+                const slot1 = document.getElementById(`slot-${qid}-1`);
+                const slot2 = document.getElementById(`slot-${qid}-2`);
+                if (slot1) {
+                    slot1.innerHTML = `<span class="text-slate-400 text-xs font-arabic font-normal">الفراغ 1</span>`;
+                    slot1.className = "drop-target min-w-[85px] min-h-[48px] rounded-2xl flex items-center justify-center font-en text-base sm:text-xl font-black px-3.5 shadow-inner cursor-pointer";
+                }
+                if (slot2) {
+                    slot2.innerHTML = `<span class="text-slate-400 text-xs font-arabic font-normal">الفراغ 2</span>`;
+                    slot2.className = "drop-target min-w-[110px] min-h-[48px] rounded-2xl flex items-center justify-center font-en text-base sm:text-xl font-black px-3.5 shadow-inner cursor-pointer";
+                }
+            } else {
+                const slot = document.getElementById(`slot-${qid}`);
+                if (slot) {
+                    slot.innerHTML = `<span class="text-slate-400 text-xs font-arabic font-normal">اسحب أو انقر هنا</span>`;
+                    slot.className = "drop-target min-w-[130px] min-h-[48px] rounded-2xl flex items-center justify-center font-en text-base sm:text-xl font-black px-3.5 shadow-inner cursor-pointer";
+                }
+            }
+
+            const row = document.getElementById(`card-row-${qid}`);
+            if (row) {
+                row.classList.remove('border-emerald-300', 'bg-emerald-50/40', 'border-rose-300', 'bg-rose-50/40');
+            }
+
+            updateProgress();
+        }
+
+        function checkAllCardsAnswers() {
+            let correctCount = 0;
+            let totalAnswered = 0;
+
+            questionsDB.forEach(q => {
+                const row = document.getElementById(`card-row-${q.id}`);
+
+                if (!q.userAnswer) {
+                    if (q.isSplitQuestion) {
+                        const s1 = document.getElementById(`slot-${q.id}-1`);
+                        const s2 = document.getElementById(`slot-${q.id}-2`);
+                        if (s1) s1.classList.add('wrong');
+                        if (s2) s2.classList.add('wrong');
+                        setTimeout(() => {
+                            if (s1) s1.classList.remove('wrong');
+                            if (s2) s2.classList.remove('wrong');
+                        }, 800);
+                    } else {
+                        const slot = document.getElementById(`slot-${q.id}`);
+                        if (slot) {
+                            slot.classList.add('wrong');
+                            setTimeout(() => slot.classList.remove('wrong'), 800);
+                        }
+                    }
+                    return;
+                }
+
+                totalAnswered++;
+                const isCorrect = (q.userAnswer.toLowerCase() === q.correct.toLowerCase());
+
+                if (q.isSplitQuestion) {
+                    const s1 = document.getElementById(`slot-${q.id}-1`);
+                    const s2 = document.getElementById(`slot-${q.id}-2`);
+                    const statusClass = isCorrect ? 'correct' : 'wrong';
+
+                    if (s1) {
+                        s1.className = `drop-target min-w-[85px] min-h-[48px] ${statusClass} rounded-2xl flex items-center justify-center font-en text-base sm:text-xl font-black px-3.5`;
+                    }
+                    if (s2) {
+                        s2.className = `drop-target min-w-[110px] min-h-[48px] ${statusClass} rounded-2xl flex items-center justify-center font-en text-base sm:text-xl font-black px-3.5`;
+                    }
+                } else {
+                    const slot = document.getElementById(`slot-${q.id}`);
+                    if (slot) {
+                        const statusClass = isCorrect ? 'correct' : 'wrong';
+                        slot.className = `drop-target min-w-[130px] min-h-[48px] ${statusClass} rounded-2xl flex items-center justify-center font-en text-base sm:text-xl font-black px-3.5`;
+                    }
+                }
+
+                if (isCorrect) {
+                    correctCount++;
+                    if (row) {
+                        row.classList.remove('border-rose-300', 'bg-rose-50/40');
+                        row.classList.add('border-emerald-300', 'bg-emerald-50/40');
+                    }
+                } else {
+                    if (row) {
+                        row.classList.remove('border-emerald-300', 'bg-emerald-50/40');
+                        row.classList.add('border-rose-300', 'bg-rose-50/40');
+                    }
+                }
+            });
+
+            if (totalAnswered < questionsDB.length) {
+                playSound('wrong');
+                showToast(`أجبت عن ${totalAnswered} من أصل 20 سؤالاً. أكمل بقية الفراغات للتحقق بالكامل! 📝`, 'warning');
+                return;
+            }
+
+            if (correctCount === questionsDB.length) {
+                playSound('fanfare');
+                addXP(350);
+                triggerConfetti();
+                showSuccessModal(correctCount, 350);
+            } else {
+                playSound('wrong');
+                showToast(`أحسنت! إجاباتك الصحيحة هي ${correctCount} من 20. راجع الأسئلة المظللة بالأحمر لتصحيحها!`, 'info');
+                addXP(correctCount * 10);
+            }
+        }
+
+        function resetCardsView() {
+            questionsDB.forEach(q => q.userAnswer = null);
+            renderCards();
+            playSound('pop');
+            showToast('تمت إعادة ضبط ورقة العمل بنجاح! 🔄', 'info');
+        }
+
+        function autoSolveDemo() {
+            questionsDB.forEach(q => q.userAnswer = q.correct);
+            renderCards();
+            checkAllCardsAnswers();
+        }
+
+        function filterCards(category) {
+            gameState.filter = category;
+            ['all', 'affirmative', 'negative', 'question'].forEach(cat => {
+                const btn = document.getElementById(`filter-${cat}`);
+                if (cat === category) {
+                    btn.className = "px-3 py-1.5 rounded-xl bg-indigo-600 text-white transition";
+                } else {
+                    btn.className = "px-3 py-1.5 rounded-xl text-slate-600 hover:bg-indigo-50 transition";
+                }
+            });
+            renderCards();
+            playSound('pop');
+        }
+
+        function updateProgress() {
+            const answered = questionsDB.filter(q => q.userAnswer !== null).length;
+            const pct = Math.round((answered / questionsDB.length) * 100);
+            document.getElementById('cards-progress-bar').style.width = `${pct}%`;
+            document.getElementById('cards-progress-text').textContent = `${answered} / ${questionsDB.length}`;
+        }
+
+        function startArcadeGame() {
+            gameState.arcadeIndex = 0;
+            gameState.arcadeStreak = 0;
+            gameState.lives = 3;
+            renderHearts();
+            loadArcadeQuestion();
+        }
+
+        function loadArcadeQuestion() {
+            clearInterval(gameState.arcadeInterval);
+            gameState.arcadePaused = false;
+            gameState.arcadeTimer = 15;
+
+            const q = questionsDB[gameState.arcadeIndex];
+            document.getElementById('arcade-step-counter').textContent = `${gameState.arcadeIndex + 1} / ${questionsDB.length}`;
+            document.getElementById('arcade-streak').textContent = gameState.arcadeStreak;
+            document.getElementById('arcade-avatar').textContent = q.avatar;
+            document.getElementById('arcade-clue-badge').textContent = q.keyword;
+            document.getElementById('arcade-arabic-hint').textContent = q.arabicHint;
+            document.getElementById('arcade-feedback').textContent = '';
+            document.getElementById('arcade-next-btn').classList.add('hidden');
+
+            const typeLabel = q.type === 'affirmative' ? 'إثبات (+)' : (q.type === 'negative' ? 'نفي (-)' : 'سؤال (?)');
+            document.getElementById('arcade-type-badge').textContent = typeLabel;
+
+            // Render sentence
+            const sBox = document.getElementById('arcade-sentence-box');
+            if (q.isSplitQuestion) {
+                sBox.innerHTML = `
+                    <span id="arcade-slot-1" class="inline-block px-4 py-1 bg-white border-2 border-dashed border-indigo-400 rounded-2xl text-indigo-600 font-black animate-pulse">?</span>
+                    <span class="px-1 text-indigo-950 font-black">${q.mid}</span>
+                    <span id="arcade-slot-2" class="inline-block px-4 py-1 bg-white border-2 border-dashed border-indigo-400 rounded-2xl text-indigo-600 font-black animate-pulse">?</span>
+                    <span>${q.after}</span>
+                `;
+            } else {
+                sBox.innerHTML = `
+                    <span>${q.before}</span>
+                    <span id="arcade-slot" class="inline-block px-4 py-1 bg-white border-2 border-dashed border-indigo-400 rounded-2xl text-indigo-600 font-black animate-pulse">?</span>
+                    <span>${q.after}</span>
+                `;
+            }
+
+            // Options buttons
+            const optBox = document.getElementById('arcade-options-box');
+            optBox.innerHTML = '';
+            q.options.forEach((opt) => {
+                const btn = document.createElement('button');
+                btn.className = "py-4 px-3 rounded-2xl font-en text-xl sm:text-2xl font-black bg-white hover:bg-indigo-50 text-indigo-900 border-2 border-indigo-100 shadow-sm btn-3d";
+                btn.textContent = opt;
+                btn.onclick = () => handleArcadeChoice(opt);
+                optBox.appendChild(btn);
+            });
+
+            startArcadeTimer();
+        }
+
+        function startArcadeTimer() {
+            document.getElementById('arcade-timer').textContent = `${gameState.arcadeTimer}s`;
+            gameState.arcadeInterval = setInterval(() => {
+                gameState.arcadeTimer--;
+                document.getElementById('arcade-timer').textContent = `${gameState.arcadeTimer}s`;
+
+                if (gameState.arcadeTimer <= 0) {
+                    clearInterval(gameState.arcadeInterval);
+                    handleArcadeTimeout();
+                }
+            }, 1000);
+        }
+
+        function handleArcadeChoice(chosen) {
+            if (gameState.arcadePaused) return;
+            clearInterval(gameState.arcadeInterval);
+            gameState.arcadePaused = true;
+
+            const q = questionsDB[gameState.arcadeIndex];
+            const feedback = document.getElementById('arcade-feedback');
+
+            // Fill arcade sentence with chosen value
+            if (q.isSplitQuestion) {
+                const parts = chosen.split(' / ');
+                const as1 = document.getElementById('arcade-slot-1');
+                const as2 = document.getElementById('arcade-slot-2');
+                if (as1) {
+                    as1.textContent = parts[0] || chosen;
+                    as1.classList.remove('border-dashed', 'animate-pulse');
+                    as1.classList.add('border-solid', 'bg-indigo-50');
+                }
+                if (as2) {
+                    as2.textContent = parts[1] || '';
+                    as2.classList.remove('border-dashed', 'animate-pulse');
+                    as2.classList.add('border-solid', 'bg-indigo-50');
+                }
+            } else {
+                const as = document.getElementById('arcade-slot');
+                if (as) {
+                    as.textContent = chosen;
+                    as.classList.remove('border-dashed', 'animate-pulse');
+                    as.classList.add('border-solid', 'bg-indigo-50');
+                }
+            }
+
+            if (chosen.toLowerCase() === q.correct.toLowerCase()) {
+                playSound('correct');
+                gameState.arcadeStreak++;
+                addXP(20);
+                feedback.innerHTML = `<span class="text-emerald-600 font-black">🎉 إجابة خارقة وصحيحة! (+20 XP)</span>`;
+                speakSentence(q.fullSentence);
+
+                setTimeout(() => {
+                    nextArcadeQuestion();
+                }, 1300);
+            } else {
+                playSound('wrong');
+                gameState.arcadeStreak = 0;
+                gameState.lives--;
+                renderHearts();
+                feedback.innerHTML = `<span class="text-rose-600 font-black">❌ إجابة غير صحيحة! الإجابة هي: "${q.correct}"</span>`;
+
+                if (gameState.lives <= 0) {
+                    setTimeout(() => {
+                        showToast('انتهت قلوب المحاولة! أعد التجربة بحماس 💥', 'warning');
+                        startArcadeGame();
+                    }, 1500);
+                } else {
+                    document.getElementById('arcade-next-btn').classList.remove('hidden');
+                }
+            }
+        }
+
+        function handleArcadeTimeout() {
+            gameState.arcadePaused = true;
+            playSound('wrong');
+            gameState.arcadeStreak = 0;
+            gameState.lives--;
+            renderHearts();
+            document.getElementById('arcade-feedback').innerHTML = `<span class="text-rose-600 font-black">⏰ انتهى الوقت!</span>`;
+            
+            if (gameState.lives <= 0) {
+                setTimeout(() => {
+                    showToast('انتهت قلوب المحاولة! أعد التجربة بحماس 💥', 'warning');
+                    startArcadeGame();
+                }, 1500);
+            } else {
+                document.getElementById('arcade-next-btn').classList.remove('hidden');
+            }
+        }
+
+        function nextArcadeQuestion() {
+            if (gameState.arcadeIndex < questionsDB.length - 1) {
+                gameState.arcadeIndex++;
+                loadArcadeQuestion();
+            } else {
+                playSound('fanfare');
+                triggerConfetti();
+                showSuccessModal(20, 400);
+            }
+        }
+
+        function renderHearts() {
+            const hContainer = document.getElementById('hearts-container');
+            hContainer.innerHTML = '';
+            for (let i = 0; i < 3; i++) {
+                const heart = document.createElement('span');
+                heart.className = `text-base ${i < gameState.lives ? 'text-rose-500 animate-pulse' : 'text-slate-300'}`;
+                heart.textContent = '❤️';
+                hContainer.appendChild(heart);
+            }
+        }
+
+        const clueWords = [
+            { en: "now", ar: "الآن", icon: "⏰" },
+            { en: "right now", ar: "في هذه اللحظة", icon: "⚡" },
+            { en: "at the moment", ar: "في الوقت الحالي", icon: "⏳" },
+            { en: "Look!", ar: "انظر!", icon: "👀" },
+            { en: "Listen!", ar: "استمع!", icon: "👂" },
+            { en: "today", ar: "اليوم", icon: "📅" }
+        ];
+
+        function renderClueWords() {
+            const grid = document.getElementById('clue-words-grid');
+            grid.innerHTML = '';
+            clueWords.forEach(w => {
+                const item = document.createElement('div');
+                item.className = "bg-white p-3 rounded-2xl border-2 border-amber-200 text-center shadow-xs cursor-pointer hover:border-amber-400 hover:scale-105 transition active:scale-95";
+                item.innerHTML = `
+                    <div class="text-2xl mb-1">${w.icon}</div>
+                    <div class="font-en font-black text-amber-900 text-sm sm:text-base">${w.en}</div>
+                    <div class="text-[11px] text-slate-500 font-arabic font-bold">${w.ar}</div>
+                `;
+                item.onclick = () => {
+                    playSound('pop');
+                    speakSentence(w.en);
+                };
+                grid.appendChild(item);
+            });
+        }
+
+        function switchTab(tabId) {
+            ['cards-view', 'arcade-quiz', 'keywords-lab'].forEach(t => {
+                document.getElementById(`section-${t}`).classList.add('hidden');
+                document.getElementById(`tab-${t}`).className = "tab-btn px-4 sm:px-5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm transition-all flex items-center gap-2 bg-white text-slate-600 hover:bg-slate-50 border border-slate-200";
+            });
+
+            document.getElementById(`section-${tabId}`).classList.remove('hidden');
+            document.getElementById(`tab-${tabId}`).className = "tab-btn px-4 sm:px-5 py-2.5 rounded-2xl font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shadow-sm bg-indigo-600 text-white shadow-indigo-200";
+
+            playSound('pop');
+
+            if (tabId === 'arcade-quiz') {
+                startArcadeGame();
+            } else {
+                clearInterval(gameState.arcadeInterval);
+            }
+            if (tabId === 'keywords-lab') {
+                renderClueWords();
+            }
+        }
+
+        function addXP(points) {
+            gameState.xp += points;
+            document.getElementById('xp-counter').textContent = gameState.xp;
+        }
+
+        function showToast(msg, type = 'info') {
+            const toast = document.createElement('div');
+            const bg = type === 'warning' ? 'bg-amber-500' : (type === 'success' ? 'bg-emerald-600' : 'bg-slate-800');
+            toast.className = `fixed bottom-6 right-1/2 translate-x-1/2 ${bg} text-white font-bold py-3 px-6 rounded-2xl shadow-xl z-50 text-xs sm:text-sm transition-all duration-300 transform scale-90 opacity-0 flex items-center gap-2 text-center`;
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+
+            requestAnimationFrame(() => {
+                toast.classList.remove('scale-90', 'opacity-0');
+                toast.classList.add('scale-100', 'opacity-100');
+            });
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'scale-90');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function openRuleModal() {
+            playSound('pop');
+            document.getElementById('rule-modal').classList.remove('hidden');
+        }
+
+        function closeRuleModal() {
+            playSound('pop');
+            document.getElementById('rule-modal').classList.add('hidden');
+        }
+
+        function showSuccessModal(correct, xp) {
+            document.getElementById('final-correct-score').textContent = `${correct}/20`;
+            document.getElementById('final-earned-xp').textContent = `+${xp} XP`;
+            document.getElementById('success-modal').classList.remove('hidden');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+
+        function triggerConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const colors = ['#f43f5e', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899'];
+
+            for (let i = 0; i < 90; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height * 0.4,
+                    r: Math.random() * 6 + 3,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    vx: (Math.random() - 0.5) * 6,
+                    vy: Math.random() * 4 + 2
+                });
+            }
+
+            let frames = 0;
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.fill();
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vy += 0.05;
+                });
+                frames++;
+                if (frames < 120) {
+                    requestAnimationFrame(animate);
+                } else {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }
+            }
+            animate();
+        }
+
+        // Window onload initialization
+        window.onload = function () {
+            renderCards();
+            renderClueWords();
+        };
+    </script>
+</body>
+</html>
